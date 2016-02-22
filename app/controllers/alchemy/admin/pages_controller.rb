@@ -1,6 +1,7 @@
 module Alchemy
   module Admin
     class PagesController < Alchemy::Admin::BaseController
+      require 'sidekiq/api'
       helper 'alchemy/pages'
 
       before_action :set_translation,
